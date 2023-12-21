@@ -65,3 +65,4 @@ for epoch in range(num_epochs):
         optimizer.step()
 
     print(error/len(titanic_dataset))
+    
