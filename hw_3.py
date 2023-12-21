@@ -41,3 +41,4 @@ class CIFAR100PredictorPerceptron(torch.nn.Module):
         x = self.softmax(x)
 
         return x
+    
