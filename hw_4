@@ -31,8 +31,8 @@ test_cifar10_dataset = Subset(datasets.CIFAR10(
     transform=transforms.ToTensor()
 ), test_indices)
 
-train_dl = DataLoader(train_cifar10_dataset, batch_size=1)
-test_dl = DataLoader(test_cifar10_dataset, batch_size=1)
+train_dl = DataLoader(train_cifar10_dataset, batch_size=32)
+test_dl = DataLoader(test_cifar10_dataset, batch_size=32)
 
 
 class ConvNet(nn.Module):
@@ -85,7 +85,7 @@ class ConvNet(nn.Module):
 
 
 model = ConvNet()
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-4)
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-6)
 loss_fn = torch.nn.CrossEntropyLoss()
 
 num_epochs = 20
