@@ -12,7 +12,7 @@ train_indices = torch.arange(12000)
 test_indices = torch.arange(4500)
 
 train_cifar10_dataset = Subset(datasets.CIFAR10(
-    root='./data_1',
+    root='./data',
     train=True,
     download=True,
     transform=transforms.Compose([
@@ -25,7 +25,7 @@ train_cifar10_dataset = Subset(datasets.CIFAR10(
 ), train_indices)
 
 test_cifar10_dataset = Subset(datasets.CIFAR10(
-    root='./data_1',
+    root='./data',
     train=False,
     download=True,
     transform=transforms.ToTensor()
